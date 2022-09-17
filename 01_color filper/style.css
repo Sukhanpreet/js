@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 300px;
+}
+
+.container :first-child {
+    margin-bottom: 30px;
+}
+
+.container>div {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 2px;
+}
+
+h2::before {
+    content: "- ";
+}
+
+#button {
+    background-color: white;
+    color: black;
+    font-size: 1.2rem;
+    padding: 10px;
+    border: 1px solid black;
+    transform: scale(0.9);
+    transition: all 0.2s ease-in-out;
+}
+
+#button:active {
+    transform: scale(1);
+}
