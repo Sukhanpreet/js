@@ -1,3 +1,64 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+body {
+  width: 60%;
+  margin: 20px auto;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  font-family: "Courgette", cursive;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-block-end: 30px;
+}
+
+form {
+  font-size: 16px;
+}
+form #custom-name {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #000;
+  transition: all 0.5s;
+}
+form div {
+  text-align: center;
+  margin: 10px auto;
+}
+form button {
+  background-color: rgb(20, 20, 228);
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 0 4px #000;
+  transition: all 0.5s;
+}
+form button:hover {
+  background-color: rgb(9, 9, 167);
+  transform: scale(1.1);
+}
+
+.story {
+  font-size: 18px;
+  letter-spacing: 1px;
+  margin-block: 30px;
+  border-radius: 5px;
+}
+
+@media (min-width: 600px) {
+  .name {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

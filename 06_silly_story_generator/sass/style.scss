@@ -1,0 +1,52 @@
+@import 'config';
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+
+body{
+    width: 60%;
+    margin:20px auto;
+    font-family: $font-1;
+}
+
+header{
+    font-family: $font-2;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-block-end: 30px;
+}
+
+form{
+    font-size: 16px;
+    
+    #custom-name{
+        margin: 5px;
+        @include input-style;
+    }
+    div{
+        text-align: center;
+        margin:10px auto;
+    }
+    button{
+        background-color: rgb(20, 20, 228);
+        color: #fff;
+        @include input-style;
+        &:hover{
+            background-color: rgb(9, 9, 167);
+            transform: scale(1.1)
+        }
+    }
+}
+
+.story{
+    font-size: 18px;
+    letter-spacing: 1px;
+    margin-block:30px;
+    border-radius: 5px;
+}
+
+@import 'mobile';

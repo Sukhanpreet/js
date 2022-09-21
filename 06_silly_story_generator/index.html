@@ -5,30 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Silly Story generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courgette&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <h1>Silly Story Generator</h1>
     </header>
     <main>
-      <div>
-        <label for="custom-name">Enter custom name:</label>
-        <input
-          type="text"
-          name="custom-name"
-          id="custom-name"
-          placeholder="e.g. Jane"
-        />
-      </div>
-      <div>
-        <label for="us">US</label>
-        <input type="radio" name="country" id="us" value="us" checked />
-        <label for="uk">UK</label>
-        <input type="radio" name="country" id="uk" value="uk" />
-      </div>
-      <div>
-        <button class="create-story">Let the magic begin</button>
-      </div>
+      <form>
+        <div class="name">
+          <label for="custom-name">Enter custom name:</label>
+          <input
+            type="text"
+            name="custom-name"
+            id="custom-name"
+            placeholder="e.g. Jane"
+          />
+        </div>
+        <div>
+          <label for="us">US</label>
+          <input type="radio" name="country" id="us" value="us" checked />
+          <label for="uk">UK</label>
+          <input type="radio" name="country" id="uk" value="uk" />
+        </div>
+        <div>
+          <button class="create-story">Let the magic begin</button>
+        </div>
+      </form>
       <div class="story"></div>
     </main>
   </body>

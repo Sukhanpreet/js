@@ -1,0 +1,7 @@
+@media (min-width: 600px) {
+    .name{
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+}
