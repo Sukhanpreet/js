@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Silly Story generator</title>
+  </head>
+  <body>
+    <header>
+      <h1>Silly Story Generator</h1>
+    </header>
+    <main>
+      <div>
+        <label for="custom-name">Enter custom name:</label>
+        <input
+          type="text"
+          name="custom-name"
+          id="custom-name"
+          placeholder="e.g. Jane"
+        />
+      </div>
+      <div>
+        <label for="us">US</label>
+        <input type="radio" name="country" id="us" value="us" checked />
+        <label for="uk">UK</label>
+        <input type="radio" name="country" id="uk" value="uk" />
+      </div>
+      <div>
+        <button class="create-story">Let the magic begin</button>
+      </div>
+      <div class="story"></div>
+    </main>
+  </body>
+</html>
