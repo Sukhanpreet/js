@@ -70,13 +70,24 @@
       }
 
       let cars = [taxi, cadi, fiat, chevy];
-
       for (let i = 0; i < cars.length; i++) {
         check(cars[i]);
       }
-
-      document.write(worthALook);
     </script>
+    <style>
+      .text {
+        background: lightblue;
+        padding: 10px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <div class="text">
+      Prequalify the cars based on
+      <ul>
+        <li>10,000 miles of less</li>
+        <li>Build in 1960 or before</li>
+      </ul>
+    </div>
+  </body>
 </html>
