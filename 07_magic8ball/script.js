@@ -23,6 +23,13 @@ let ball={
 
 }
 
+ques.addEventListener('focus',function(){
+    if(ball.ballState){
+        ques.value='';
+        magicBall.innerHTML='8'; 
+    }
+});
+
 magicBall.addEventListener('click',function(){
     if(ques.value==''){
         alert('You have to ASK something to get the answer');
