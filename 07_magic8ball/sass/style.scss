@@ -1,30 +1,29 @@
-*{
-    box-sizing:border-box;
-    margin: 0;
-    padding: 0;
-    font-size: 18px;
-}
+@use 'utilities';
+@use 'animation';
 
 .container{
-    max-width: 600px;
-    width: 80%;
+    width: 100%;
     margin: auto;
     text-align: center;
 }
 
 h1{
-    font-size: 2rem;
-    margin: 1rem;
+    font-size: 2.5rem;
+    margin-block: 1rem;
+    background: -webkit-linear-gradient(purple, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
 }
 
 #ques{
+    width: 80%;
+    max-width: 30rem;
     font-size: 1rem;
     text-align: center;
-    padding: 10px;
-    width: 100%;
-    margin: 20px;
+    padding: 0.5rem;
+    margin-block: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.5rem;
     box-shadow: 0 0 5px gray;
     outline: none;
 }
@@ -33,17 +32,63 @@ h1{
     box-shadow: 0 0 10px gray;
 }
 
-#ball{
-    cursor: pointer;
-    box-sizing: content-box;
-    width: 100px;
+.ball-outer{
+    background-image: radial-gradient(farthest-side at 60% 30%, white, gray 0%,black 65%);
+    width: 90%;
+    max-width: 350px;
     aspect-ratio: 1;
-    color: white;
-    background: radial-gradient(
-        black,
-        white
-      );
-    border: 50px solid black;
+    margin: 1rem auto;
     border-radius: 50%;
-    margin: 10px;
+    box-shadow: 0 0 10px gray;
+    @extend %flex;
 }
+
+.shake{
+    animation: shake 200ms linear 3 alternate-reverse;
+}
+
+.ball-inner{
+    width: 200px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: black;
+    border: 2px solid rgb(51, 51, 51, 0.7);
+    position: relative;
+}
+
+.eight{
+    color: black;
+    background: radial-gradient(farthest-side at 80% 30%, rgb(255, 255, 255) 0%,rgb(228, 226, 226) 65%);
+    height: 100%;
+    border-radius: 50%;
+    font-size: 12rem;
+    @extend %flex;
+    animation: fade-in 0.5s ease-in 1 forwards;
+}
+
+.triangle {
+    width: 0;
+    aspect-ratio: 1;
+    border-top: 130px solid transparent;
+    border-right: 130px solid blue;
+
+    @extend %flex;
+    
+    transform:  translateX(25%) translateY(10%) rotate(45deg);
+    animation: fade-in 2s ease-in 1 forwards;
+  }
+
+  
+
+  .text {
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    
+    font-size: 0.8rem;
+    color: white;
+
+    animation: fade-in 3s ease-in 1 forwards;
+  }
