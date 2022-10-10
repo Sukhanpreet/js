@@ -23,8 +23,9 @@ body {
 .container>div {
     background-color: white;
     padding: 20px;
+    border: none;
     border-radius: 10px;
-    box-shadow: 0 0 2px;
+    box-shadow: 0 0 10px gray;
 }
 
 h2::before {
@@ -36,7 +37,9 @@ h2::before {
     color: black;
     font-size: 1.2rem;
     padding: 10px;
-    border: 1px solid black;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 10px gray;
     transform: scale(0.9);
     transition: all 0.2s ease-in-out;
 }
