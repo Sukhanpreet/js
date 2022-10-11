@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-font: 'Roboto', sans-serif;
+    --gray-dark: hsl(209, 61%, 16%);
+    --gray-blue: hsl(209, 34%, 30%);
+    --gray-light: hsl(210, 36%, 96%);
+    --white: hsl(0, 0%, 100%);
+    --blue-dark: hsl(205, 86%, 17%);
+    --blue-light: hsl(205, 78%, 60%);
+    --blue-ligher: hsl(205, 86%, 81%);
+
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --transition: all 0.5s linear;
+    --spacing: 0.1rem;
+}
+
+body {
+    font-family: var(--main-font);
+    background: var(--gray-light);
+    color: var(--gray-dark);
+    line-height: 1.5;
+    font-size: 0.8rem;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* nav bar */
+
+nav {
+    background: var(--white);
+    box-shadow: var(--light-shadow);
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+/* toggle button */
+.nav-toggle {
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: var(--blue-light);
+    background: transparent;
+    border: none;
+    transition: var(--transition);
+}
+
+.nav-toggle:hover {
+    color: var(--blue-dark);
+    transform: rotate(90deg);
+}
+
+.logo {
+    height: 40px;
+}
+
+.links a {
+    color: var(--gray-blue);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: var(--spacing);
+    display: block;
+    padding: 0.5rem 1rem;
+    transition: var(--transition);
+}
+
+.links a:hover {
+    background: var(--blue-ligher);
+}
+
+.social-icons {
+    display: none;
+}
+
+
+/* screen size larger than 600px */
+@media (min-width: 800px) {
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    .nav-header {
+        padding: 0;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .links {
+        display: flex;
+    }
+
+    .links a:hover {
+        background: transparent;
+        color: var(--blue-ligher);
+    }
+
+    .social-icons {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .social-icons a {
+        color: var(--gray-blue);
+        font-size: 1.1rem;
+        text-shadow: var(--light-shadow);
+        transition: var(--transition);
+    }
+
+    .social-icons a:hover {
+        color: var(--blue-ligher);
+    }
+
+}
