@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+}
+
+.proCount {
+    display: none;
+}
+
+.buy {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+button,
+.proCount,
+.count {
+    background-color: blue;
+    color: white;
+    padding: 15px;
+}
